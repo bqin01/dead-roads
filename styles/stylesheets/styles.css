@@ -1,0 +1,12 @@
+body
+{
+  margin: 0px;
+}
+@font-face {
+  font-family: Highway;
+  src: url("../HWYGOTH.ttf");
+}
+html
+{
+  font-family: Highway, sans-serif;
+}
