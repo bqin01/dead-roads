@@ -1,12 +1,13 @@
 body
 {
   margin: 0px;
+  word-spacing: 5px;
 }
 @font-face {
-  font-family: Highway;
-  src: url("HWYGOTH.ttf");
+    font-family: "Highway";
+    src: url("//db.onlinewebfonts.com/t/23c12dded52f1a5611f4370786fa86af.ttf") format("truetype");
 }
 html
 {
-  font-family: Highway, sans-serif;
+  font-family: "Highway", sans-serif;
 }
