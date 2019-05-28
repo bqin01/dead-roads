@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="styles/stylesheets/index.css" type = "text/css" rel="stylesheet">
+    <link href="styles/stylesheets/styles.css" type = "text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <title>Dead Roads</title>
+    <script>
+      function underlay(element){
+        var uLay = $(element).find(".button-underlay");
+        var buttonE = $(element).find("button");
+        $(uLay).css("display","block");
+        $(uLay).css("z-index","-1");
+        $(uLay).css("width",$(buttonE).css("width"));
+        $(uLay).css("height",$(buttonE).css("height"));
+        console.log($(uLay).css("width"));
+        if($(uLay).css("width") == "0px"){
+          $(uLay).css("width","400");
+          $(uLay).css("height","225");
+        }
+        $(uLay).css("transform",$(buttonE).css("transform"));
+      }
+      function ununderlay(element){
+        var uLay = $(element).find(".button-underlay");
+        $(uLay).css("display","none");
+      }
+    </script>
+  </head>
+  <body>
+    <div id = "background-image-holder" style = "height: 1500px">
+      <div id = "white-background">
+        <h1>This page ain't ready yet. Come back soon!</h1>
+        <div class = "button-and-underlay" onmouseover = "underlay(this);" onmouseout = "ununderlay(this);" id = "return-button">
+          <button onclick="window.location.href='/'" class = 'text-box'>
+            <p>Return</p>
+          </button>
+          <div class = "button-underlay"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

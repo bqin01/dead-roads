@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="styles/stylesheets/index.css" type = "text/css" rel="stylesheet">
+    <link href="styles/stylesheets/styles.css" type = "text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <title>Dead Roads</title>
+    <script>
+      function underlay(element){
+        var uLay = $(element).find(".button-underlay");
+        var buttonE = $(element).find("button");
+          console.log($(buttonE).css("width"));
+        $(uLay).css("display","block");
+        $(uLay).css("z-index","-1");
+        $(uLay).css("width",$(buttonE).css("width"));
+        $(uLay).css("height",$(buttonE).css("height"));
+        $(uLay).css("transform",$(buttonE).css("transform"));
+      }
+      function ununderlay(element){
+        var uLay = $(element).find(".button-underlay");
+        $(uLay).css("display","none");
+      }
+    </script>
+  </head>
+  <body>
+    <div id = "background-image-holder" style = "height: 1500px">
+      <div id = "white-background">
+        <h1>Reflective Questions</h1>
+        <div id = "text">
+          <h4>How do you feel about your final video(s)? How does the final product differ from your initial vision? What is working well? What could be improved?</h4>
+
+          <p>This video was very challenging to make, but it was very satisfying to produce. This movie did not actually stray too far from what we initially imagined. The biggest difference from our vision to our product is that when we are planning, we usually have this perfect set imagined, but in reality it is basically impossible to get that &#34;perfect&#34; set to actually happen. We were extremely on schedule for most of the term (contrasting greatly with last year), and this was because we learned to work within our limitations this year. For example, we did not try to rent out the Tirana Room twice every week, and we also tried to limit the amount of actors in each shot to have the most flexible shooting schedule possible. We could probably have improved by storyboarding a bit more, as there is a little bit of the story left untold near the middle of the movie. We also took a good amount of time to make a &#34;kickass&#34; website to promote and document our movie.</p>
+
+          <h4>What were some of the challenges in your process? What were some of revelations?</h4>
+
+          <p>Through trying to script, film, and edit this video, the biggest challenge we had was under the umbrella of &#34;suspension of disbelief&#34;. Within the premises of a high school and a minimal budget, there is only so much we could do to make a house look less like a dormitory, a campus crosswalk seem like an abandoned playground, etc. Our ambitions for certain shots were cut short when we realized what was feasible and wasn&#39;t. Settings were one thing and cast was another. None of the cast were particularly talented at acting, so we had to make do with what we had.<p>
+
+          <p>The only shot we thought we would have trouble with is the actual crash. How do we run someone over without running someone over? The answer we came up with was to create a dummy out of a big pillow dressed in the same clothes and use a tree to block out the crash, substituting the dummy in for the father.</p>
+
+          <h4>What were some of the influences on this project? (Other films, videos, texts, or artworks?)</h4>
+
+          <p>One of our main inspirations was likely the last film we worked on, &#34;Verdict&#34;. Following a similar theme of narrative and investigation, we wanted to focus more on character development rather than an intricate case. We were inspired by films that explored self-discovery, such as Ikiru. Other small pieces of our film drew from existing films. The driving scenes were drawn from Marvel films such as Guardians of the Galaxy (Mr. Blue Sky is, of course, found in one of the Awesome Mixes) as well as the timestamps for settings. An inspiration for the scene describing the security footage was inspired by the Phoenix Wright series.</p>
+
+          <h4>4. What is next? That is to say: will this video have another life, another audience? (submit to student film festivals? screen for friends and family?) And from your vantage point now, do you have other ideas for projects in film and video emerging?</h4>
+
+          <p>Taking this class for the second time always felt like we would build onto our previous project &#34;Verdict&#34;, but it turned out that we went a pretty different direction with this one. We&#39;re definitely are planning on sharing this video with our family and friends, but we don&#39;t really see us following up on this video in the future, mostly since we are both graduating and moving to different places in the country. We will definitely continue to use video producing as a skill in both of our futures; however, narrative storytelling videos like these may not happen again.</p>
+
+        </div>
+        <div class = "button-and-underlay" onmouseover = "underlay(this);" onmouseout = "ununderlay(this);" id = "return-button">
+          <button onclick="window.location.href='/'" class = 'text-box'>
+            <p>Return</p>
+          </button>
+          <div class = "button-underlay"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

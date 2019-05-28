@@ -9,11 +9,15 @@
       function underlay(element){
         var uLay = $(element).find(".button-underlay");
         var buttonE = $(element).find("button");
-          console.log($(buttonE).css("width"));
         $(uLay).css("display","block");
         $(uLay).css("z-index","-1");
         $(uLay).css("width",$(buttonE).css("width"));
         $(uLay).css("height",$(buttonE).css("height"));
+        console.log($(uLay).css("width"));
+        if($(uLay).css("width") == "0px"){
+          $(uLay).css("width","400");
+          $(uLay).css("height","225");
+        }
         $(uLay).css("transform",$(buttonE).css("transform"));
       }
       function ununderlay(element){
@@ -21,18 +25,9 @@
         $(uLay).css("display","none");
       }
     </script>
-    <style>
-      button:hover{
-
-      }
-
-      button p:hover{
-
-      }
-    </style>
   </head>
   <body>
-    <div id = "background-image-holder">
+    <div id = "background-image-holder" style = "height: 2500px">
       <div id = "front-image">
         <div id = "film-by" class = 'text-box'>
           <h2>A Short Film</h2>
@@ -44,8 +39,20 @@
         <div id = "bill-desc" class = 'text-box'>
           <h3>...and a young man who finally feels the consequences of his recklessness.</h3>
         </div>
+        <div class = "button-and-underlay" onmouseover = "underlay(this);" onmouseout = "ununderlay(this);" id = 'video'>
+          <iframe width="400" height="225" src="https://www.youtube.com/embed/9PXohoLTdg8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+          <div class = "button-underlay" style = "top: 15px; left: 15px;"></div>
+        </div>
+
+        <div class = "button-and-underlay" onmouseover = "underlay(this);" onmouseout = "ununderlay(this);" id = "youtube-button">
+          <button onclick="window.location.href='https://www.youtube.com/watch?v=9PXohoLTdg8'" class = 'text-box'>
+            <p>Watch on YouTube</p>
+          </button>
+          <div class = "button-underlay"></div>
+        </div>
         <div class = "button-and-underlay" onmouseover = "underlay(this);" onmouseout = "ununderlay(this);" id = "char-button">
-          <button onclick="window.location.href='/cast/'" class = 'text-box'>
+          <button onclick="window.location.href='/cast.html'" class = 'text-box'>
             <p>View Entire Cast</p>
           </button>
           <div class = "button-underlay"></div>
@@ -58,7 +65,7 @@
         </div>
 
         <div class = "button-and-underlay" onmouseover = "underlay(this);" onmouseout = "ununderlay(this);" id = "q-button">
-          <button onclick="window.location.href='/reflections/'" class = 'text-box'>
+          <button onclick="window.location.href='reflections.html'" class = 'text-box'>
             <p>Reflections</p>
           </button>
           <div class = "button-underlay"></div>

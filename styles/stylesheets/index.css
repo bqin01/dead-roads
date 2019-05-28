@@ -47,11 +47,10 @@ h3{
 }
 #background-image-holder
 {
+  text-align: center;
   width: 100%;
-  height: 4400px;
   background-color: #540404;
   position: relative;
-  border-bottom: 10px solid black;
 }
 .text-box{
   transform: translate(-50%, -50%);
@@ -59,6 +58,14 @@ h3{
   -webkit-transform: translate(-50%, -50%);
   position: absolute;
   text-align: center;
+}
+#text
+{
+  text-align: left;
+}
+#text h4
+{
+  margin-top: 50px;
 }
 #front-image
 {
@@ -74,6 +81,14 @@ h3{
   background-image: url('../assets/images/website_background.png');
   background-repeat: no-repeat;
   background-size: 90%;
+}
+#white-background
+{
+  width: 800px;
+  height: 1000px;
+  padding: 100px;
+  margin: 200px auto 100px auto;
+  background-color: white;
 }
 #film-by
 {
@@ -97,20 +112,38 @@ h3{
 }
 #char-button
 {
-  left: 60%;
-  top: 1300px;
+  left: 30%;
+  top: 2100px;
 }
 
 #blog-button
 {
-  left: 45%;
-  top: 1400px;
+  left: 15%;
+  top: 2200px;
 }
-
 #q-button
 {
-  left: 75%;
-  top: 1400px;
+  left: 45%;
+  top: 2200px;
+}
+#youtube-button
+{
+  left: 30%;
+  top: 2000px;
+}
+#return-button
+{
+  left: 50%;
+  top: 1300px;
+}
+#video
+{
+  position: absolute;
+  left: 55.7%;
+  top: 1450px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 .button-and-underlay
 {
@@ -128,4 +161,14 @@ h3{
   position: absolute;
   background-color: #540404;
   z-index: -1;
+}
+.video-underlay{
+  position: absolute;
+  left: 57%;
+  top: 1460px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+  z-index: -1;
+  background-color: #540404;
 }
