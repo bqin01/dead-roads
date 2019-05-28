@@ -3,7 +3,33 @@
   <head>
     <link href="styles/stylesheets/index.css" type = "text/css" rel="stylesheet">
     <link href="styles/stylesheets/styles.css" type = "text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <title>Dead Roads</title>
+    <script>
+      function underlay(element){
+        var uLay = $(element).find(".button-underlay");
+        var buttonE = $(element).find("button");
+          console.log($(buttonE).css("width"));
+        $(uLay).css("display","block");
+        $(uLay).css("z-index","-1");
+        $(uLay).css("width",$(buttonE).css("width"));
+        $(uLay).css("height",$(buttonE).css("height"));
+        $(uLay).css("transform",$(buttonE).css("transform"));
+      }
+      function ununderlay(element){
+        var uLay = $(element).find(".button-underlay");
+        $(uLay).css("display","none");
+      }
+    </script>
+    <style>
+      button:hover{
+
+      }
+
+      button p:hover{
+
+      }
+    </style>
   </head>
   <body>
     <div id = "background-image-holder">
@@ -18,11 +44,24 @@
         <div id = "bill-desc" class = 'text-box'>
           <h3>...and a young man who finally feels the consequences of his recklessness.</h3>
         </div>
-        <div id = "angelreana-desc" class = 'text-box'>
-          <h3>A reporter with an odd fascination with a cat is forced to report manslaughter.</h3>
+        <div class = "button-and-underlay" onmouseover = "underlay(this);" onmouseout = "ununderlay(this);" id = "char-button">
+          <button onclick="window.location.href='/cast/'" class = 'text-box'>
+            <p>View Entire Cast</p>
+          </button>
+          <div class = "button-underlay"></div>
         </div>
-        <div id = "nalu-desc" class = 'text-box'>
-          <h3>A cashier is forced to watch.</h3>
+        <div class = "button-and-underlay" onmouseover = "underlay(this);" onmouseout = "ununderlay(this);" id = "blog-button">
+          <button onclick="window.location.href='https://natewang36.github.io/art609/'" class = 'text-box'>
+            <p>Weekly Progress</p>
+          </button>
+          <div class = "button-underlay"></div>
+        </div>
+
+        <div class = "button-and-underlay" onmouseover = "underlay(this);" onmouseout = "ununderlay(this);" id = "q-button">
+          <button onclick="window.location.href='/reflections/'" class = 'text-box'>
+            <p>Reflections</p>
+          </button>
+          <div class = "button-underlay"></div>
         </div>
       </div>
     </div>
